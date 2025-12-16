@@ -1,278 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Parent Pal – Permissions & Features</title>
-  <style>
-    :root{
-      --bg:#0b0f14;
-      --card:#121a23;
-      --text:#eaf0f6;
-      --muted:#a9b6c5;
-      --line:#243244;
-      --accent:#ff4da6;
-      --ok:#25d366;
-      --warn:#ffcc00;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #081018, var(--bg));
-      color:var(--text);
-      padding:20px;
-    }
-    header{
-      max-width:980px;
-      margin:0 auto 14px auto;
-      padding:18px 16px;
-      border:1px solid var(--line);
-      background: rgba(18,26,35,.75);
-      border-radius:16px;
-    }
-    h1{margin:0 0 6px 0; font-size:20px}
-    p{margin:6px 0; color:var(--muted); line-height:1.45}
-    .wrap{max-width:980px; margin:0 auto}
-    .note{
-      margin-top:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px dashed var(--line);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:12px;
-      margin-top:14px;
-    }
-    @media(min-width:900px){
-      .grid{grid-template-columns: 1fr 1fr;}
-    }
-    .card{
-      border:1px solid var(--line);
-      background: rgba(18,26,35,.82);
-      border-radius:16px;
-      padding:14px 14px 12px 14px;
-    }
-    .top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom:8px;
-    }
-    .feature{
-      font-weight:700;
-      font-size:15px;
-      margin:0;
-    }
-    .pill{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
-      white-space:nowrap;
-    }
-    .perm{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin:10px 0 10px 0;
-    }
-    code{
-      background:#0a121b;
-      border:1px solid var(--line);
-      padding:6px 8px;
-      border-radius:10px;
-      color:#d7e6f7;
-      font-size:12px;
-    }
-    ul{margin:8px 0 0 18px; color:var(--muted); line-height:1.5}
-    .small{font-size:12px; color:var(--muted); margin-top:10px}
-    footer{
-      max-width:980px;
-      margin:16px auto 0 auto;
-      padding:14px 16px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background: rgba(18,26,35,.6);
-      color:var(--muted);
-      font-size:13px;
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-  </style>
+    <meta charset="UTF-8">
+    <title>Permissions Disclosure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #0f1220;
+            color: #ffffff;
+            margin: 0;
+            padding: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .updated {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: #161a2e;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .card ul {
+            padding-left: 18px;
+        }
+
+        .note {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-top: 8px;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>Parent Pal – Why we request permissions</h1>
-    <p>
-      Parent Pal uses device permissions only to provide child safety and parental supervision features.
-      We request permissions when you use a feature that needs them.
-    </p>
-    <div class="note">
-      <strong style="color:var(--text)">Privacy note:</strong>
-      Parent Pal does not sell personal data. Permission access is used for app features and safety alerts only.
-      You can change permissions anytime in Android Settings.
-    </div>
-  </header>
 
-  <div class="wrap">
-    <div class="grid">
+<div class="container">
 
-      <!-- LOCATION -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Live Child Location / Safety Zones</p>
-          <span class="pill">Location</span>
-        </div>
-        <div class="perm">
-          <code>ACCESS_FINE_LOCATION</code>
-          <code>ACCESS_COARSE_LOCATION</code>
-          <code>ACCESS_BACKGROUND_LOCATION (if enabled)</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Show the child device location to the parent for safety.</li>
-          <li>Enable location-based alerts (e.g., safe zone entry/exit) when the parent turns it on.</li>
-          <li>Background location is used only for zone alerts when the app is not open (if you enable that feature).</li>
-        </ul>
-      </section>
+    <h1>Permissions & Data Usage</h1>
+    <div class="updated">Last Updated: 07 May 2025</div>
 
-      <!-- NOTIFICATIONS -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Child Safety Notifications & Alerts</p>
-          <span class="pill">Notifications</span>
-        </div>
-        <div class="perm">
-          <code>POST_NOTIFICATIONS (Android 13+)</code>
-          <code>Notification Listener Access</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Send safety-related alerts and reminders from the child device.</li>
-          <li>Allow parents to view child-related alert notifications for supervision (not personal message content).</li>
-        </ul>
-      </section>
-
-      <!-- OVERLAY / SYSTEM ALERT -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Full-Screen Event / Emergency Alert Display</p>
-          <span class="pill">Display over other apps</span>
-        </div>
-        <div class="perm">
-          <code>SYSTEM_ALERT_WINDOW</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Show important safety or event alerts on top of other apps so they aren’t missed.</li>
-          <li>Used only for child alerts/reminders that you enable, not for ads.</li>
-        </ul>
-      </section>
-
-      <!-- EXACT ALARM -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Scheduled Reminders & Event Alerts</p>
-          <span class="pill">Exact alarms</span>
-        </div>
-        <div class="perm">
-          <code>SCHEDULE_EXACT_ALARM</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Trigger reminders and safety alerts at the exact time you set.</li>
-          <li>Helps alerts work reliably even when the app is closed.</li>
-        </ul>
-      </section>
-
-      <!-- DEVICE ADMIN -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Parental Controls (Device Protection)</p>
-          <span class="pill">Device admin</span>
-        </div>
-        <div class="perm">
-          <code>Device Administrator (DPM)</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Enable parental control protections like preventing unauthorized changes on the child device.</li>
-          <li>Used only for parental control and child safety features you activate.</li>
-        </ul>
-      </section>
-
-      <!-- USAGE ACCESS -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">App Usage Monitoring</p>
-          <span class="pill">Usage access</span>
-        </div>
-        <div class="perm">
-          <code>PACKAGE_USAGE_STATS (Usage Access)</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Show how much time the child spends on apps for parental insight.</li>
-          <li>Help enforce limits or routines (if you enable them).</li>
-        </ul>
-      </section>
-
-      <!-- ACCESSIBILITY (only if you use it) -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">On-device Supervision Controls (Optional)</p>
-          <span class="pill">Accessibility (only if used)</span>
-        </div>
-        <div class="perm">
-          <code>Accessibility Service</code>
-        </div>
-        <p class="small">Why we need it:</p>
-        <ul>
-          <li>Support supervision features like blocking restricted actions or helping enforce limits (if enabled).</li>
-          <li>Not used to read typed passwords or personal chats.</li>
-        </ul>
-        <p class="small" style="margin-top:10px;color:var(--warn)">
-          If your app does not use Accessibility features, remove this section.
+    <!-- Notification Permission -->
+    <div class="card">
+        <h2>Notification Access</h2>
+        <p>
+            Parent Pal AI requires notification access to help parents receive important
+            child-related safety alerts and reminders.
         </p>
-      </section>
-
-      <!-- FOREGROUND SERVICE (common for tracking/alerts) -->
-      <section class="card">
-        <div class="top">
-          <p class="feature">Reliable Safety Features While App Runs</p>
-          <span class="pill">Foreground service</span>
-        </div>
-        <div class="perm">
-          <code>FOREGROUND_SERVICE</code>
-          <code>FOREGROUND_SERVICE_LOCATION (if used)</code>
-        </div>
-        <p class="small">Why we need it:</p>
         <ul>
-          <li>Keep child safety features running reliably when needed (with a visible system notification).</li>
-          <li>Used for active safety functions, not for background advertising.</li>
+            <li>View safety notifications from the child’s device</li>
+            <li>Receive important alerts in real time</li>
         </ul>
-      </section>
+        <p class="note">
+            Parent Pal AI does not read personal messages, store notification content,
+            or share notification data with third parties.
+        </p>
+    </div>
 
+    <!-- Display Over Other Apps -->
+    <div class="card">
+        <h2>Display Over Other Apps</h2>
+        <p>
+            This permission allows Parent Pal AI to show important child safety alerts
+            on top of other apps.
+        </p>
+        <ul>
+            <li>Ensure emergency alerts are immediately visible</li>
+            <li>Prevent missing scheduled child reminders</li>
+        </ul>
+        <p class="note">
+            This permission is used only for safety and parental alerts,
+            not for ads or background pop-ups.
+        </p>
     </div>
-  </div>
 
-  <footer>
-    <div><strong style="color:var(--text)">Need help?</strong></div>
-    <div style="margin-top:6px">
-      You can manage permissions in <strong>Settings → Apps → Parent Pal → Permissions</strong>.
-      If a permission is denied, some safety features may not work as expected.
+    <!-- Device Admin -->
+    <div class="card">
+        <h2>Device Administrator Access</h2>
+        <p>
+            Device administrator access is required to enable essential parental
+            control and child safety features.
+        </p>
+        <ul>
+            <li>Enforce safety settings</li>
+            <li>Prevent unauthorized app removal</li>
+            <li>Manage child device restrictions</li>
+        </ul>
+        <p class="note">
+            No device changes are performed without explicit parent authorization.
+        </p>
     </div>
-    <div style="margin-top:8px">
-      Contact: <a href="mailto:support@apphubzone.com">support@apphubzone.com</a> (replace with your real support email)
+
+    <!-- Usage Stats -->
+    <div class="card">
+        <h2>App Usage Access</h2>
+        <p>
+            App usage access helps parents understand how the child uses apps
+            and manage screen time responsibly.
+        </p>
+        <ul>
+            <li>View app usage summaries</li>
+            <li>Monitor screen-time patterns</li>
+            <li>Support healthy digital habits</li>
+        </ul>
+        <p class="note">
+            Parent Pal AI does not access personal app content
+            or monitor activity beyond parental supervision features.
+        </p>
     </div>
-  </footer>
+
+    <!-- Location -->
+    <div class="card">
+        <h2>Location Access</h2>
+        <p>
+            Location access is used to help parents view the child’s device location
+            for safety purposes.
+        </p>
+        <ul>
+            <li>Enable real-time child location viewing</li>
+            <li>Support safety alerts and location-based features</li>
+        </ul>
+        <p class="note">
+            Location data is accessible only to the linked parent account and is not
+            shared with third parties. Location may be collected even when the app
+            is not actively in use to support safety features.
+        </p>
+    </div>
+
+    <!-- Exact Alarm -->
+    <div class="card">
+        <h2>Exact Alarm / Event Alerts</h2>
+        <p>
+            Exact alarm permission is used to deliver scheduled child-related reminders
+            and safety alerts at the correct time.
+        </p>
+        <p class="note">
+            This permission is used only for reliable event alerts and is not used
+            for advertising or unrelated purposes.
+        </p>
+    </div>
+
+</div>
+
 </body>
 </html>
